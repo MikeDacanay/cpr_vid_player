@@ -1,0 +1,91 @@
+.modalVid{
+	background: transparent;  
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+	position: absolute;
+	transition: background-color 0.8s;
+	display: flex;
+}
+
+.modalVid__active{
+	background: rgba(0,0,0,0.85098);
+	z-index: 9000;
+}
+
+
+.lightboxVid {
+	max-width: 1080px;
+	padding: 0 24px;	
+	width: 100%;	
+	transform: translateY(25%);
+	opacity: 0;
+	transition: all .5s;
+	align-self: center;
+	position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.lightboxVid__active {
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+.lightboxVid__height{
+	padding-top: 56.097%;
+}
+
+.modalClose {
+	height: 24px;
+	width: 24px;
+	position: absolute;
+  left: 0;
+  right: 0;	
+	height: 24px;
+  width: 24px;
+  position: absolute;
+  left: 0;
+  background: red;  
+  right: 0;
+  margin-left: auto;
+  transform: translate(-12px, 12px);  
+	opacity: 0;
+}
+
+.modalVid__active > .modalClose{
+	opacity: 1;
+	transition: opacity 0.8s; 
+}
+
+
+iframe {
+	width: calc(100% - 48px); 
+	height: 100%;
+	position: absolute;
+	z-index: 10;
+	border-style: none;
+	border-width: 0;
+}
+
+@media only screen and (max-height: 640px) and (min-height: 540px){
+	.lightboxVid{
+		height: 445.5px;
+		width: 792px;
+	}
+}
+
+@media only screen and (max-height: 539px) and (min-height: 380px){
+	.lightboxVid{
+		height: 310.5px;
+		width: 552px;
+	}
+}
+
+@media only screen and (max-height: 379px) and (min-height: 0px){
+	.lightboxVid{
+		width: 352px;
+		height: 198px;
+	}
+}
