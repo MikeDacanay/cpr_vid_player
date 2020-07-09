@@ -47,11 +47,12 @@
   width: 24px;
   position: absolute;
   left: 0;
-  background: red;  
+  /*background: red;  */
   right: 0;
   margin-left: auto;
   transform: translate(-12px, 12px);  
 	opacity: 0;
+	background-image: url('../assets/images/icon_close.svg');
 }
 
 .modalVid__active > .modalClose{
